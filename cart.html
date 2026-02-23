@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cart - Bachpan Ka Pyaar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">Bachpan Ka Pyaar</div>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="cart.html" class="cart-link">
+      Cart <span id="cart-count" class="cart-badge">0</span>
+    </a>
+  </nav>
+</header>
+
+<section class="container">
+  <h2>Your Cart</h2>
+  <div id="cart-items"></div>
+  <div id="cart-total"></div>
+  <button id="whatsapp-btn" class="cta-btn">Checkout via WhatsApp</button>
+</section>
+
+<!-- Toast -->
+<div id="toast" class="toast"></div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img">
+</div>
+
+<script src="js/app.js" defer></script>
+
+</body>
+</html>

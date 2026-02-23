@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product - Gaurav Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">Gaurav Store</div>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="cart.html" class="cart-link">
+      Cart <span id="cart-count" class="cart-badge">0</span>
+    </a>
+  </nav>
+</header>
+
+<main class="container">
+  <div id="product-detail"></div>
+</main>
+
+<!-- Toast -->
+<div id="toast" class="toast"></div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img">
+</div>

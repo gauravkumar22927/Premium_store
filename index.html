@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bachpan Ka Pyaar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">Bachpan Ka Pyaar</div>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="cart.html" class="cart-link">
+      Cart <span id="cart-count" class="cart-badge">0</span>
+    </a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="bg-animation">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="hero-content">
+    <h1 class="title">Bachpan Ka Pyaar</h1>
+    <p class="subtitle">
+      Wapas laaye 90s ki mithaas aur yaadein 🍭
+    </p>
+    <a href="shop.html" class="cta-btn">Explore Nostalgia</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Bachpan Ka Pyaar. Made with ❤️ in India.</p>
+</footer>
+
+<script src="js/app.js"></script>
+
+<!-- Toast -->
+<div id="toast" class="toast"></div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img">
+</div>
+
+</body>
+</html>

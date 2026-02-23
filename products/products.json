@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Crunchy Potato Chips",
+    "price": 20,
+    "image": "/images/chips.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Colorful Candy Treat",
+    "price": 15,
+    "image": "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg"
+  },
+  {
+    "id": 3,
+    "name": "Delicious Cookies",
+    "price": 25,
+    "image": "https://images.pexels.com/photos/230325/pexels-photo-230325.jpeg"
+  }
+]
