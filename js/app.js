@@ -36,6 +36,7 @@ function routePage() {
     loadShop();
   } else if (path.includes("cart.html")) {
     loadCart();
+    setupWhatsAppCheckout(); // 🔥 ADD THIS
   } else if (path.includes("product.html")) {
     loadProductDetail();
   }
@@ -117,6 +118,45 @@ function loadProductDetail() {
       </div>
     </div>
   `;
+}
+
+/* ===================================== */
+/* WHATSAPP CHECKOUT */
+/* ===================================== */
+
+function setupWhatsAppCheckout() {
+  const btn = document.getElementById("whatsapp-btn");
+  if (!btn) return;
+
+  btn.addEventListener("click", function () {
+    if (!cart.length) {
+      alert("Your cart is empty!");
+      return;
+    }
+
+    let message = "Hello, I would like to order:\n\n";
+    let total = 0;
+
+    cart.forEach(item => {
+      const product = products.find(p => p.id === item.id);
+      if (!product) return;
+
+      const subtotal = product.price * item.qty;
+      total += subtotal;
+
+      message += `${product.name} × ${item.qty} - ₹${subtotal}\n`;
+    });
+
+    message += `\nTotal: ₹${total}`;
+
+    const phone = "919876543210"; // 🔥 Replace with YOUR number (no +)
+
+    const encodedMessage = encodeURIComponent(message);
+
+    const whatsappURL = `https://wa.me/${phone}?text=${encodedMessage}`;
+
+    window.location.href = whatsappURL;
+  });
 }
 
 /* ===================================== */
@@ -214,6 +254,7 @@ function showToast(message) {
     toast.classList.remove("show");
   }, 2000);
 }
+
 
 /* ===================================== */
 /* LIGHTBOX */
