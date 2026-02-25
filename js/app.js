@@ -32,13 +32,21 @@ function startApp() {
 function routePage() {
   const path = window.location.pathname;
 
-  if (path.includes("/shop.html")) {
+  console.log("Current Path:", path); // 🔥 debug
+
+  if (path.endsWith("shop.html") || path.endsWith("/shop")) {
     loadShop();
-  } else if (path.includes("/cart.html")) {
+  } 
+  else if (path.endsWith("cart.html") || path.endsWith("/cart")) {
     loadCart();
-    setupWhatsAppCheckout(); // 🔥 ADD THIS
-  } else if (path.includes("/product.html")) {
+    setupWhatsAppCheckout();
+  } 
+  else if (path.endsWith("product.html") || path.includes("product")) {
     loadProductDetail();
+  } 
+  else {
+    // default = homepage
+    console.log("Home page loaded");
   }
 }
 
