@@ -32,12 +32,12 @@ function startApp() {
 function routePage() {
   const path = window.location.pathname;
 
-  if (path.includes("shop.html")) {
+  if (path.includes("/shop.html")) {
     loadShop();
-  } else if (path.includes("cart.html")) {
+  } else if (path.includes("/cart.html")) {
     loadCart();
     setupWhatsAppCheckout(); // 🔥 ADD THIS
-  } else if (path.includes("product.html")) {
+  } else if (path.includes("/product.html")) {
     loadProductDetail();
   }
 }
