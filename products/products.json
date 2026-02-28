@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Crunchy Potato Chips",
       "price": 20,
-      "image": "/images/chips.jpg"
+      "image": "/images/chips1.jpg"
     },
     {
       "id": 2,
@@ -20,4 +20,3 @@
     }
   ]
 }
-
